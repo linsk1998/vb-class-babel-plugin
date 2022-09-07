@@ -1,0 +1,30 @@
+{
+	"name": "@vb-class/babel-plugin",
+	"version": "0.0.0",
+	"description": "transform classes to vb style",
+	"main": "dist/index.js",
+	"scripts": {
+		"watch": "tsc -watch",
+		"test": "node test.js"
+	},
+	"keywords": [
+		"vb",
+		"class",
+		"babel"
+	],
+	"author": "linsk",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/babel__core": "^7.1.19",
+		"@types/babel__helper-plugin-utils": "^7.10.0",
+		"@types/babel__template": "^7.4.1",
+		"@types/babel__traverse": "^7.18.1",
+		"typescript": "^4.8.2"
+	},
+	"dependencies": {
+		"@babel/core": "^7.18.13",
+		"@babel/helper-environment-visitor": "^7.18.9",
+		"@babel/helper-plugin-utils": "^7.19.0",
+		"@babel/traverse": "^7.18.13"
+	}
+}
