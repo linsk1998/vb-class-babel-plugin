@@ -10,32 +10,50 @@ var Anonymous = /*#__PURE__*/function () {
   return _Anonymous2;
 }();
 
-var Animal = /*#__PURE__*/function () {
-  function Animal() {}
+var Empty = /*#__PURE__*/function () {
+  function Empty() {}
 
-  return Animal;
+  return Empty;
 }();
 
-var Dog = /*#__PURE__*/function (_Super) {
-  _inheritsLoose(Dog, getArg1(Animal));
+var HasConstructor = /*#__PURE__*/function () {
+  function HasConstructor(a, b, c, ...d) {}
 
-  function Dog() {}
+  return HasConstructor;
+}();
 
-  return Dog;
-}(getArg1(Animal));
+var SuperExpression = /*#__PURE__*/function (_Super) {
+  function SuperExpression() {}
 
-var Cat = /*#__PURE__*/function (Animal) {
-  _inheritsLoose(Cat, Animal);
+  _inheritsLoose(SuperExpression, getArg1(EmptySuper));
 
-  function Cat() {}
-
-  return Cat;
-}(Animal);
-
-var cat = new Cat();
-console.log(cat instanceof Cat);
-console.log(cat instanceof Animal);
+  return SuperExpression;
+}(getArg1(EmptySuper));
 
 function getArg1(arg1) {
   return arg1;
 }
+
+var Extend = /*#__PURE__*/function (EmptySuper) {
+  function Extend() {}
+
+  _inheritsLoose(Extend, EmptySuper);
+
+  return Extend;
+}(EmptySuper);
+
+var ExtendHasSuper = /*#__PURE__*/function (EmptySuper) {
+  function ExtendHasSuper() {}
+
+  _inheritsLoose(ExtendHasSuper, EmptySuper);
+
+  return ExtendHasSuper;
+}(EmptySuper);
+
+var ExtendHasConstructor = /*#__PURE__*/function (EmptySuper) {
+  function ExtendHasConstructor() {}
+
+  _inheritsLoose(ExtendHasConstructor, EmptySuper);
+
+  return ExtendHasConstructor;
+}(EmptySuper);

@@ -1,20 +1,29 @@
 var _Anonymous = null;
 var Anonymous = class { };
-class Animal {
+class Empty {
 }
-
-class Dog extends getArg1(Animal) {
-}
-class Cat extends Animal {
-	constructor(){
-
+class HasConstructor {
+	constructor(a,b,c,...d){
 	}
 }
-var cat = new Cat();
-console.log(cat instanceof Cat);
-console.log(cat instanceof Animal);
 
-
+class SuperExpression extends getArg1(EmptySuper) {
+}
 function getArg1(arg1){
 	return arg1;
+}
+class Extend extends EmptySuper {
+}
+class ExtendHasSuper extends EmptySuper {
+	constructor(){
+		super();
+	}
+}
+
+class ExtendHasConstructor extends EmptySuper {
+    a;
+	constructor(){
+		super();
+        this.a=1;
+	}
 }
